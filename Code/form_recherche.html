@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<form>
+			<table>
+				  <tr>
+				  	<td id="conected">
+						<p>Login : </p>
+					</td>
+					<td id="aff_conected">
+						<input type="text" name="affiche_co">	
+					</td>
+					
+					<td id="nb_photos">
+						<p>Nombre de photos: </p>
+					</td>
+					<td id="select_nb_photos">
+						<select name="select_photos" default="none">
+							<!-- <option disabled selected value></option> -->
+							<option value="5">5</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="25">25</option>
+						</select>
+					</td>
+					<td id="recherche">
+						<input type="submit" value="Recherche">
+					</td>
+				  </tr>
+				  <tr>
+				  	<td id="hashtag">
+						<p>Recherche par Hastag: </p><div class="input-group-prepend">
+						  <span class="input-group-text">@</span>
+						</div>			
+					</td>
+					<td id="select_hashtag" class="input-group">
+						
+						<input class="form-control" id="hashtags" placeholder="Hastags" required="" type="text">
+					</td>
+					
+					<td id="date_dbt">
+						<p>Date Début : </p>			
+					</td>
+					<td id="select_date_dbt">
+						<input type="date" name="date début">
+					</td>
+					
+					<td id="date_fin">
+						<p>Date Fin : </p>			
+					</td>
+					<td id="select_date_fin">
+						<input type="date" name="date fin">					
+					</td>
+					<td id="rechercheplus">
+						<input type="submit" value="Recherche avancée">
+					</td>
+				  </tr>
+				</table>
+		</form>
+		
+	</body>
+</html>
+ 
+ 
+ <input id="nom_champs_date" style="position:absolute;left:173px;top:537px;width:209px;height:22px;line-height:22px;z-index:37;" name="nom_champs_date" value="" type="text">
+ 
+ <div id="wb_Image2" style="position:absolute;left:383px;top:534px;width:26px;height:26px;z-index:38;">
+<a href="javascript:popupwnd('calendrier7.php?idcible=nom_champs_date&amp;langue=fr','no','no','no','yes','yes','no','50','50','450','280')" target="_self"><img src="images.jpg" id="Image2" alt=""></a></div>
