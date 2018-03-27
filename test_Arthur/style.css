@@ -6,3 +6,13 @@ h1 {
   height: 400px;
   width: 100%;
  }
+
+ body {
+ 	background-image : url("avion.jpg");
+ 	background-repeat : no-repeat ;
+ }
+
+ #login {
+ 	margin-left : 50px ;
+ 	width : 30% ;
+ }
