@@ -1,6 +1,6 @@
 var test = document.getElementById("insta") ;
 var text = "" ;
-
+/*
 ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.50a736093ff74da59dff518cc556a89d", 
 		function (reponse) {
     
@@ -11,16 +11,16 @@ ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206
     			
     			x.src =identity.data[0].carousel_media[i].images.thumbnail.url;
     			
-    			test.appendChild(x) ;*/
+    			test.appendChild(x) ;
     			
     		}
-    		/* obtenir infos localisation d'une photo */
+    		// obtenir infos localisation d'une photo 
     		var lat = identity.data[1].location.latitude ;
     		var long = identity.data[1].location.longitude ;
     		document.getElementById("test").innerHTML = y ;
     	}
     
-);
+);*/
 
 
  function initMap() {
@@ -47,7 +47,7 @@ function showDiv(id) {
 }
 
 function notShowDiv(id) {
-    console.log(id) ;
     document.getElementById(id).style.display = "none" ;
 }
+
 
