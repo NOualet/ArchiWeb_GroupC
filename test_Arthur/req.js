@@ -42,4 +42,12 @@ ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206
  	 });
 }
 
+function showDiv(id) {
+    document.getElementById(id).style.display = "block" ;
+}
+
+function notShowDiv(id) {
+    console.log(id) ;
+    document.getElementById(id).style.display = "none" ;
+}
 

@@ -1,18 +1,29 @@
-h1 {
-	text-align : center ;
-}
 
 #map {
   height: 400px;
   width: 100%;
  }
 
- body {
+ #first_page {
  	background-image : url("avion.jpg");
  	background-repeat : no-repeat ;
+ 	height :800px ;
+ }
+
+ #second_page {
+ 	background-color : #343a40 ;
+ 	height : 800px ;
+ 	display : none ;
  }
 
  #login {
  	margin-left : 50px ;
  	width : 30% ;
+ 	padding-top : 70px ;
  }
+
+.mb-3 {
+	text-align : center ;
+	color : #002f7a ;
+}
+
