@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <title>Instamaps</title>
+</head>
+
+<body>
+
+     <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+            <strong>Instamaps</strong>
+          </a>
+        </div>
+      </div>
+    <div id="first_page">
+    <div id="insta">
+        <img id="myImg" src="">
+    </div>
+
+    <div>
+        <p id="test"></p>
+    </div>
+
+    <!--<div id="inscription">
+        <p><a href="https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code">Login</a></p>
+    </div>-->
+
+    <div id="login">
+    <form class="form-signin">
+      <div class="text-center mb-4">
+      <img id="img_insta" class="mb-4" src="../images/insta.jpg" alt="logo instagram" width="110" height="100">
+    </div>
+      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="showDiv('second_page')">Sign in</button>
+      <p>Don't have an account ? <a href="https://www.instagram.com/?hl=fr">Sign up</a></p>
+    </form>
+    </div>
+  </div>
+
+  <div id="second_page">
+    <h1>Critères de Recherche</h1>
+    <h3>My Google Maps Demo</h3>
+<div id="map"></div>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8AAp_IdsbIjFvvJrH86IExMyBNd1JfsQ&callback=initMap">
+</script>
+    <script src="../scripts/ajax.js"></script>
+    <script src="../scripts/req.js"></script>
+    
+</div>
+
+</body>
+
+</html>
