@@ -4,14 +4,55 @@
 	<link rel="stylesheet" type="text/css" href="map.css" />
   </head>
   <body>
+
     <h3>My Google Maps Demo</h3>
-    <div id="map"></div>
+    <div class="ui visible very wide right sidebar inverted vertical menu" id="side">
+        <a class="item">
+          <img src="https://scontent.cdninstagram.com/vp/81834cb42906a1ad4287a9b707f84183/5B4109F5/t51.2885-15/s150x150/e35/14334822_1806325886311084_1095502737_n.jpg" />
+        </a>
+      </div>
+
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script async defer
     	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczsPlVhhXlgcxO7GDaHj3pDQMqife1tA&callback=initMap">
     </script>
     <script type="text/javascript" src="map.js"></script>
+    <div class="ui horizontal segments">
+      <div class="ui segment">
+        <div class="ui tertiary inverted segment">
+          <div id="map"></div>
 
+
+
+            <div class="ui inverted segment">
+              <p>Saisir le nom sur instagram</p>
+              <div class="ui icon input">
+                <input type="text" placeholder="Search...">
+                <i class="inverted circular search link icon"></i>
+              </div>
+            </div>
+
+          <p></p>
+          <button class="ui facebook button"><i class="facebook icon"></i> Facebook </button>
+          <button class="ui twitter button"><i class="twitter icon"></i> Twitter </button>
+          <button class="ui instagram button"><i class="instagram icon"></i> Instagram </button>
+        </div>
+      </div>
+
+      <div class="ui segment">
+        <div class="zone">
+
+
+        <div>
+
+      </div>
+    </div>
   </body>
 </html>

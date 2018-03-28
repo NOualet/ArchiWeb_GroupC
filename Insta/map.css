@@ -2,8 +2,19 @@
         height: 400px;
         width: 100%;
        }
-       
+
        .gm-style-iw {
     	height: 300px;
     	width: 300px;
 		}
+
+
+
+div.zone{
+  width:300px;
+}
+
+img.info{
+  height: 300px;
+  width: 300px;
+}
