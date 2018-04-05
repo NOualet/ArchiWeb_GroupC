@@ -8,10 +8,10 @@ ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206
     		var identity = JSON.parse(reponse);
   
     			var test = document.getElementById("test") ;
+    			var x = document.createElement("img") ;
+    			x.src = identity.data[2].images.standard_resolution.url;
     			
-    			var x = identity.data[0].id;
-    			
-    			test.innerHTML = x ;
+    			test.appendChild(x) ;
     			
     		// obtenir infos localisation d'une photo 
     		/*var lat = identity.data[1].location.latitude ;
