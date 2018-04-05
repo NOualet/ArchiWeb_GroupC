@@ -1,5 +1,5 @@
 
-var accessToken = "" ;
+var accessToken = "7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098" ;
 
 /*ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423", 
 		function (reponse) {
@@ -91,8 +91,8 @@ function notShowDiv(id) {
 }
 
 
- /*var token = '1362124742.3ad74ca.6df307b8ac184c2d830f6bd7c2ac5644',
-    num_photos = 30;*/
+ var token = '1362124742.3ad74ca.6df307b8ac184c2d830f6bd7c2ac5644',
+    num_photos = 30;
 var listh=[]
 var listv=[]
 var img=[]
@@ -144,7 +144,7 @@ function enter(){
        dataType: 'jsonp',
        type: 'GET',
        async:false,
-       data: {access_token: accessToken/*, count: num_photos*/},
+       data: {access_token: token, count: num_photos},
        success: function(data){
            console.log(data);
              for( x in data.data ){
