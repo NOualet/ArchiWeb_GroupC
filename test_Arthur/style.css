@@ -9,7 +9,7 @@ h1 {
  }
 
  #first_page {
- 	background-image : url("../images/avion.jpg");
+ 	background-image : url("avion.jpg");
  	background-repeat : no-repeat ;
  	background-size : cover ;
  	height :800px ;
