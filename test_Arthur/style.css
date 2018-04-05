@@ -4,7 +4,7 @@ h1 {
 
 
 #map {
-  height: 400px;
+  height: 700px;
   width: 100%;
  }
 
@@ -20,20 +20,14 @@ h1 {
  	height : 800px ;
  }
 
- #login {
+ #sign-in {
  	margin-left : 50px ;
  	width : 30% ;
- 	padding-top : 70px ;
  }
 
 .mb-3 {
 	text-align : center ;
 	color : #002f7a ;
-}
-
-#map {
-  height: 400px;
-  width: 100%;
 }
 
 .gm-style-iw {
@@ -54,4 +48,13 @@ img.info{
 
 p.infotext{
   color: black;
+}
+
+h3 {
+  text-align : center ;
+  color : white ;
+}
+
+.btn-info {
+  margin-top : 30px ;
 }

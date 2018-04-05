@@ -24,6 +24,8 @@ var accessToken = "7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098" ;
 
 
 function generationLien(id) {
+  document.getElementById("bouton").style.display = "none" ;
+
 	var client_id = "d55a4d72a41348d1b968ab248ed9a8ec" ;
 
 	var redirect_url = "http://info.univ-lemans.fr/~l3info025/test_Arthur/Instamap.html" ;
@@ -46,7 +48,7 @@ function generationLien(id) {
 }
 
 
-function accessToken() {
+function getAccessToken() {
 
 	var url = window.location.href ; // Récupère le lien de la page
 
@@ -61,27 +63,6 @@ function accessToken() {
 }
 
 
-function placeByTag() {
-	ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423",
-		function (reponse) {
-
-    		var place = JSON.parse(reponse);
-
-    		/*for(i = 0 ; i < place.data[0].carousel_media.length ; i++) {
-
-    		}*/
-
-    		var x = place.data[0].location.name ;
-
-    		document.getElementById("test").innerHTML = x ;
-
-
-
-    	}
-
-	);
-}
-
 function showDiv(id) {
     document.getElementById(id).style.display = "block" ;
 }
@@ -91,7 +72,7 @@ function notShowDiv(id) {
 }
 
 
- var token = '1362124742.3ad74ca.6df307b8ac184c2d830f6bd7c2ac5644',
+ var token = '7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098',
     num_photos = 30;
 var listh=[]
 var listv=[]
@@ -146,10 +127,9 @@ function cli(n){
 
 
 function enter(){
-    usrname=document.getElementById("username").value;
     side=null;
     $.ajax({
-       url: 'https://api.instagram.com/v1/users/'+ usrname +'/media/recent',
+       url: 'https://api.instagram.com/v1/users/self/media/recent',
        dataType: 'jsonp',
        type: 'GET',
        async:false,

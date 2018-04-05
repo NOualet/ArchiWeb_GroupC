@@ -23,62 +23,49 @@
                 </div>
             </div>
         </div>
-    <div id="first_page">
-
-
-
-
-    <div id="login">
-    <form class="form-signin">
-      <div class="text-center mb-4">
-      <img id="img_insta" class="mb-4" src="insta.jpg" alt="logo instagram" width="110" height="100">
-    </div>
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <p>Étapes à suivre : </p>
-      <ol>
-          <li>Se Connecter/S'inscrire</li>
-          <li>Suivre le lien pour récupérer l'access token</li>
-          <li>Afficher photos sur la carte</li>
-      <p>Connexion/inscription ? <a href="https://www.instagram.com/"> C'est ici</a></p>
-    </form>
-    </div>
-    </div>
-    </div>
-  </div>
-
-  <div id="second_page">
-   <div class="row">
-        <div class="col-lg-4">
-    <h3>My Google Maps Demo</h3>
-    <div class="ui visible very wide left sidebar inverted vertical menu" id="side">
-        <a class="item">
-          <img src="https://scontent.cdninstagram.com/vp/81834cb42906a1ad4287a9b707f84183/5B4109F5/t51.2885-15/s150x150/e35/14334822_1806325886311084_1095502737_n.jpg" />
-        </a>
-    </div>
-        </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.min.js"
-      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-      crossorigin="anonymous"></script>
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczsPlVhhXlgcxO7GDaHj3pDQMqife1tA&callback=initMap">
-    </script>
-    <script type="text/javascript" src="req.js"></script>
-
-        <div class="col-lg-8">
-          <div id="map"></div>
-        </div>
+      <div id="first_page">
+          <div id="sign-in">
+                <div class="text-center mb-4">
+                  <img id="img_insta" class="mb-4" src="insta.jpg" alt="logo instagram" width="110" height="100">
+                </div>
+                <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                  <p>Étapes à suivre : </p>
+                  <ol>
+                    <li>Se Connecter/S'inscrire</li>
+                    <li>Suivre le lien pour récupérer l'access token</li>
+                    <li>Afficher photos sur la carte</li>
+                  </ol>
+                  <p>Connexion/inscription ? <a href="https://www.instagram.com/"> C'est ici</a></p>
+                  <p id="lien">Récupération de l'access token : </p>
+                  <button class="btn btn-success" id="bouton" onclick="generationLien('lien')">Access Token</button><br />
+                  <p><button onclick="getAccessToken()">Here</button></p>
+          </div>
       </div>
 
+      <div id="second_page">
+        <div class="row">
+          <div class="col-lg-4">
+            <h3>Images</h3>
+            <div class="nav nav-pills nav-stacked" id="side">
+            <a class="item">
+              <img src="" />
+            </a>
+            </div> 
+          </div>
 
+          <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=crossorigin="anonymous"></script>
 
+          <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+          <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczsPlVhhXlgcxO7GDaHj3pDQMqife1tA&callback=initMap"></script>
+          <script type="text/javascript" src="req.js"></script>
 
-
-</div>
-</div>
+          <div class="col-lg-8">
+              <div id="map"></div>
+              <button class="btn btn-info" onclick="enter()">Click</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 </body>
 
