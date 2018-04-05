@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>Instamaps</title>
 </head>
@@ -33,7 +33,7 @@
     </div>
 
     <div>
-        <p id="test"></p>
+        <p id="test" onclick="placeByTag()">Cliquer pour tester fonction Localisation</p>
     </div>
 
     <!--<div id="inscription">
@@ -43,7 +43,7 @@
     <div id="login">
     <form class="form-signin">
       <div class="text-center mb-4">
-      <img id="img_insta" class="mb-4" src="../images/insta.jpg" alt="logo instagram" width="110" height="100">
+      <img id="img_insta" class="mb-4" src="insta.jpg" alt="logo instagram" width="110" height="100">
     </div>
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
@@ -63,11 +63,11 @@
     <h3>My Google Maps Demo</h3>
 <div id="map"></div>
 
-<script async defer
+<!--<script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8AAp_IdsbIjFvvJrH86IExMyBNd1JfsQ&callback=initMap">
-</script>
-    <script src="../scripts/ajax.js"></script>
-    <script src="../scripts/req.js"></script>
+</script>-->
+    <script src="ajax.js"></script>
+    <script src="req.js"></script>
     
 </div>
 

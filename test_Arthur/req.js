@@ -1,29 +1,28 @@
-/*var test = document.getElementById("insta") ;
 var text = "" ;
 
-ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.50a736093ff74da59dff518cc556a89d", 
+var accessToken = "7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423" ;
+
+ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423", 
 		function (reponse) {
     
     		var identity = JSON.parse(reponse);
-    		//test.innerHTML = identity.data[0].images.thumbnail.width;
-    		for(i = 0 ; i < identity.data[0].carousel_media.length ; i++) {
-    			var x = document.createElement("IMG") ;
+  
+    			var test = document.getElementById("test") ;
     			
-    			x.src =identity.data[0].carousel_media[i].images.thumbnail.url;
+    			var x = identity.data[0].id;
     			
-    			test.appendChild(x) ;
+    			test.innerHTML = x ;
     			
-    		}
-    		/* obtenir infos localisation d'une photo 
-    		var lat = identity.data[1].location.latitude ;
+    		// obtenir infos localisation d'une photo 
+    		/*var lat = identity.data[1].location.latitude ;
     		var long = identity.data[1].location.longitude ;
-    		document.getElementById("test").innerHTML = y ;
+    		document.getElementById("test").innerHTML = y ;*/
     	}
     
-);*/
+);
 
 
- function initMap() {
+ /*function initMap() {
  	var icons = {
  		url: "chat.jpg",
 	    scaledSize: new google.maps.Size(50, 50), // scaled size
@@ -40,7 +39,7 @@ ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206
 		 icon: icons,
 	 	 map: map
  	 });
-}
+}*/
 
 
 
@@ -80,4 +79,33 @@ function accessToken() {
 	var token = url2.searchParams.get("access_token") ;
 	console.log(token) ;
 }
-	
+
+
+function placeByTag() {
+	ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423", 
+		function (reponse) {
+    
+    		var place = JSON.parse(reponse);
+    			
+    		/*for(i = 0 ; i < place.data[0].carousel_media.length ; i++) {
+
+    		}*/
+
+    		var x = place.data[0].location.name ;
+
+    		document.getElementById("test").innerHTML = x ;
+    		
+    			
+    		
+    	}
+    
+	);
+}
+
+function showDiv(id) {
+    document.getElementById(id).style.display = "block" ;
+}
+
+function notShowDiv(id) {
+    document.getElementById(id).style.display = "none" ;
+}
