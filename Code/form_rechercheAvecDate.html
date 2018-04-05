@@ -30,20 +30,38 @@
 							<option value="25">25</option>
 						</select>
 					</td>
-				
-				
-					<td  id="textsearch">
+					<td id="recherche">
+						<input type="submit" onsubmit="return validateForm()" value="Recherche">
+					</td>
+				  </tr>
+				  <tr>
+				  	<td  id="textsearch">
 				  		<label for="hashtags">Recherche par Hastag: </label>
 					</td>
 					<td id="select_hashtag" class="input-group">
 						
 						<input id="hashtags" placeholder="@Hastags"  type="text">
-					</td>	
-					<td id="recherche">
-						<input type="submit" onsubmit="return validateForm()" value="Recherche">
+					</td>
+					
+					<td id="textsearch">
+						<label for="textdatedbt">Date Début : </label>			
+					</td>
+					
+					<td>
+						<input type="text" id="textdatedbt" placeholder="JJ/MM/AAAA">					
+					</td>					
+					
+					<td  id="textsearch">
+						<label for="textdatefin">Date Fin : </label>				
+					</td>
+					
+					<td>
+						<input type="text" id="textdatefin" placeholder="JJ/MM/AAAA">					
+					</td>
+					<td id="rechercheplus">
+						<input type="submit" onsubmit="return validateFormPlus()" value="Recherche avancée">
 					</td>
 				  </tr>
-				  
 				</table>
 		</form>
 	

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<title>Vérification de date</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="Author" content="Bovino - www.developpez.com" />
+<script type="text/javascript">
+
+function verif(){
+    var date_pas_sure = document.getElementById('valeur').value;
+    var format = /^(\d{1,2}\/){2}\d{4}$/;
+    if(!format.test(date_pas_sure)){alert('Date non valable !')}
+    else{
+        var date_temp = date_pas_sure.split('/');
+        date_temp[1] -=1;        // On rectifie le mois !!!
+        var ma_date = new Date();
+        ma_date.setFullYear(date_temp[2]);
+        ma_date.setMonth(date_temp[1]);
+        ma_date.setDate(date_temp[0]);
+        if(ma_date.getFullYear()==date_temp[2] && ma_date.getMonth()==date_temp[1] && ma_date.getDate()==date_temp[0]){
+            alert('Date valable !');
+        }
+        else{
+            alert('Date non valable !');
+        }
+    }
+}
+
+</script>
+</head>
+ 
+<body>
+    <form action="javascript:verif()">
+        <div style="margin: 50px 0 0 50px">
+            <label for="valeur">Entrez un date au format jj/mm/aaaa : </label>
+            <input type="text" id="valeur" /><br />
+            <input type="submit" value="Vérifier la date" />
+        </div>
+    </form>
+</body>
+</html>
+

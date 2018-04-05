@@ -21,40 +21,27 @@ const displayError = (id, msg) => {
 	row.appendChild(error);
 }
 
-const verifyHastags = select_hashtag => {
-	if (select_hashtag.length >= 6) return true;
-	displayError("select_hashtag", "Un hastag doit commencer par un @");
+const verifyHastags = h => {
+	if ((h.length > 2)&&(h.charAt(0)=='@')) return true;
+	displayError("select_hashtag", "Un hastag doit commencer par un @ et contenir plus de deux caractères");
 
 	return false;
 };
 
 
-const verifyDate = date => {
-	if (date !== "") return true;
-	displayError("date", "La date de fin doit respecté le format JJ/MM/AAAA.");
 
-	return false;
-};
 
-const comparDate{
 
-	
 
-}
-
-var datedbt = textdatedbt.split('').reverse('').join('');
-var datefin = textdatefin.split('').reverse('').join('');
-
-const validateForm = () => {
+const validateFormPlus = () => {
 
 	removeAllError();
 
 	const verification = [
-		verifyHashtags(form["select_hashtag"].value),
-		verifyDateDbt(form["textdatedbt"].value),
-		verifyDateFin(form["textdatefin"].value),
+		verifyHashtags(form["hashtags"].value),
+		verifyPhotos(form[""]
 	];
-
+	
 	return verification.every(e => e);
 };
 
@@ -63,8 +50,6 @@ const viewForm = () => {
 	console.log(
 		[
 			form["select_hashtag"].value,
-			form["textdatedbt"].value,
-			form["textdatefin"].value,
 		]
 	);
 };
