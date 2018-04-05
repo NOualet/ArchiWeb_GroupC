@@ -28,18 +28,26 @@ const verifyHastags = h => {
 	return false;
 };
 
+const verifyPhotos = select_photos => {
+	if (select_photos !== "") return true;
+	displayError("country", "Un pays doit être sélectionné");
+
+	return false;
+};
 
 
 
 
 
-const validateFormPlus = () => {
+
+const validateForm = () => {
 
 	removeAllError();
 
 	const verification = [
 		verifyHashtags(form["hashtags"].value),
-		verifyPhotos(form[""]
+		verifyPhotos(form["select_photos"].value)
+		
 	];
 	
 	return verification.every(e => e);
@@ -49,7 +57,8 @@ const validateFormPlus = () => {
 const viewForm = () => {
 	console.log(
 		[
-			form["select_hashtag"].value,
+			form["hashtags"].value,
+			form["select_photos"].value
 		]
 	);
 };
