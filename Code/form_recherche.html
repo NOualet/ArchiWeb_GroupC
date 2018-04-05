@@ -4,19 +4,28 @@
 		<meta charset="utf-8">
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		  <link rel="stylesheet" href="/resources/demos/style.css">
+		  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		  <script>	 
+		   $( function() {
+		    $( "#select_date_dbt" ).datepicker();
+		  } );
+		  </script>
 	</head>
 	<body>
 		<form>
 			<table>
 				  <tr>
-				  	<td id="conected">
-						<p>Login : </p>
+				  	<td id="textsearch">
+						<p>Bonjour  </p>
 					</td>
 					<td id="aff_conected">
 						<input type="text" name="affiche_co">	
 					</td>
 					
-					<td id="nb_photos">
+					<td  id="textsearch">
 						<p>Nombre de photos: </p>
 					</td>
 					<td id="select_nb_photos">
@@ -33,28 +42,34 @@
 					</td>
 				  </tr>
 				  <tr>
-				  	<td id="hashtag">
-						<p>Recherche par Hastag: </p><div class="input-group-prepend">
+				  	<td  id="textsearch">
+						<p>Recherche par Hastag: </p>
+						<!--<div class="input-group-prepend">
 						  <span class="input-group-text">@</span>
-						</div>			
+						</div>	-->		
 					</td>
 					<td id="select_hashtag" class="input-group">
 						
-						<input class="form-control" id="hashtags" placeholder="Hastags" required="" type="text">
+						<input class="form-control" id="hashtags" placeholder="@Hastags"  type="text">
 					</td>
 					
-					<td id="date_dbt">
+					<td id="textsearch">
 						<p>Date Début : </p>			
 					</td>
-					<td id="select_date_dbt">
-						<input type="date" name="date début">
+					<!--<td id="textdatedbt">
+						<input type="text" id="select_date_dbt" name="date début" placeholder="JJ/MM/AAAA">
+					</td>
+					-->
+					<td id="textdatedbt">
+						<input type="datepicker" name="date fin" placeholder="JJ/MM/AAAA">					
 					</td>
 					
-					<td id="date_fin">
+					
+					<td  id="textsearch">
 						<p>Date Fin : </p>			
 					</td>
-					<td id="select_date_fin">
-						<input type="date" name="date fin">					
+					<td id="textdatefin">
+						<input type="datetime" name="date fin" placeholder="JJ/MM/AAAA">					
 					</td>
 					<td id="rechercheplus">
 						<input type="submit" value="Recherche avancée">
@@ -62,12 +77,13 @@
 				  </tr>
 				</table>
 		</form>
+	
+		
+		
 		
 	</body>
+	<script type="text/javascript" src="search.js"></script>
 </html>
  
  
- <input id="nom_champs_date" style="position:absolute;left:173px;top:537px;width:209px;height:22px;line-height:22px;z-index:37;" name="nom_champs_date" value="" type="text">
- 
- <div id="wb_Image2" style="position:absolute;left:383px;top:534px;width:26px;height:26px;z-index:38;">
-<a href="javascript:popupwnd('calendrier7.php?idcible=nom_champs_date&amp;langue=fr','no','no','no','yes','yes','no','50','50','450','280')" target="_self"><img src="images.jpg" id="Image2" alt=""></a></div>
+

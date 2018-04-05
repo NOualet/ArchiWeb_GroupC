@@ -1,3 +1,7 @@
+h1 {
+	text-align : center ;
+}
+
 
 #map {
   height: 400px;
@@ -7,6 +11,7 @@
  #first_page {
  	background-image : url("avion.jpg");
  	background-repeat : no-repeat ;
+ 	background-size : cover ;
  	height :800px ;
  }
 
@@ -27,3 +32,4 @@
 	color : #002f7a ;
 }
 
+ 

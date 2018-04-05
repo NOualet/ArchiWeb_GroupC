@@ -1,0 +1,27 @@
+form
+{
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    
+}
+
+#textsearch{
+
+text-align: right;
+
+}
+
+#select_nb_photos{
+
+	text-align: center;
+}
+
+td{
+    padding: 16px 32px;
+margin: 4px 4px;
+}
+
+
