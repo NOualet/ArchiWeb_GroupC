@@ -1,23 +1,23 @@
 
 var accessToken = "7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098" ;
 
-/*ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423", 
+/*ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423",
 		function (reponse) {
-    
+
     		var identity = JSON.parse(reponse);
-  
+
     			var test = document.getElementById("test") ;
     			var x = document.createElement("img") ;
     			x.src = identity.data[2].images.standard_resolution.url;
-    			
+
     			test.appendChild(x) ;
-    			
-    		// obtenir infos localisation d'une photo 
+
+    		// obtenir infos localisation d'une photo
     		/*var lat = identity.data[1].location.latitude ;
     		var long = identity.data[1].location.longitude ;
     		document.getElementById("test").innerHTML = y ;
     	}
-    
+
 );*/
 
 
@@ -27,7 +27,7 @@ function generationLien(id) {
 	var client_id = "d55a4d72a41348d1b968ab248ed9a8ec" ;
 
 	var redirect_url = "http://info.univ-lemans.fr/~l3info025/test_Arthur/Instamap.html" ;
-	
+
 	var lien = 	"https://api.instagram.com/oauth/authorize/?client_id=" + client_id + "&redirect_uri="+ redirect_url + "&response_type=token" ;
 
 
@@ -36,7 +36,7 @@ function generationLien(id) {
 	var createAText = document.createTextNode("Inscription API") ;
 
 	createA.setAttribute('href', lien) ;
-	
+
 	console.log(lien) ;
 	createA.appendChild(createAText) ;
 
@@ -51,7 +51,7 @@ function accessToken() {
 	var url = window.location.href ; // Récupère le lien de la page
 
 	var url_replace = url.replace("#","?") ; // Remplace le "#" par le "?"
-	
+
 	console.log(url) ;
 
 	var url2 = new URL(url_replace) ;
@@ -62,11 +62,11 @@ function accessToken() {
 
 
 function placeByTag() {
-	ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423", 
+	ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206163106.1677ed0.7c51405b2e6e47b7a16f94834ab18423",
 		function (reponse) {
-    
+
     		var place = JSON.parse(reponse);
-    			
+
     		/*for(i = 0 ; i < place.data[0].carousel_media.length ; i++) {
 
     		}*/
@@ -74,11 +74,11 @@ function placeByTag() {
     		var x = place.data[0].location.name ;
 
     		document.getElementById("test").innerHTML = x ;
-    		
-    			
-    		
+
+
+
     	}
-    
+
 	);
 }
 
@@ -123,6 +123,15 @@ $.ajax({ // the first ajax request returns the ID of user rudrastyh
 
 
  function initMap() {
+    var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
 
 
       }
