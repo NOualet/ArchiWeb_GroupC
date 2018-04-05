@@ -5,6 +5,7 @@
     <meta charset="utf-8">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="map.css" />
 
     <title>Instamaps</title>
 </head>
@@ -24,21 +25,6 @@
         <img id="myImg" src="">
     </div>
 
-    <div id="lien" onclick="generationLien('lien')">
-  <p>Lien</p>
-    </div>
-
-    <div id="inscription">
-       <button onclick="accessToken()">Click HERE TO HAVE YOUR ACCESS TOKEN</button>
-    </div>
-
-    <div>
-        <p id="test" onclick="placeByTag()">Cliquer pour tester fonction Localisation</p>
-    </div>
-
-    <!--<div id="inscription">
-        <p><a href="https://api.instagram.com/oauth/authorize/?client_id=CLIENT-ID&redirect_uri=REDIRECT-URI&response_type=code">Login</a></p>
-    </div>-->
 
     <div id="login">
     <form class="form-signin">
@@ -46,28 +32,69 @@
       <img id="img_insta" class="mb-4" src="insta.jpg" alt="logo instagram" width="110" height="100">
     </div>
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <div class="checkbox mb-3">
-      </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="showDiv('second_page')">Sign in</button>
-      <p>Don't have an account ? <a href="https://www.instagram.com/?hl=fr">Sign up</a></p>
+      <p>Étapes à suivre : </p>
+      <ol>
+          <li>Se Connecter/S'inscrire</li>
+          <li>Suivre le lien pour récupérer l'access token</li>
+          <li>Afficher photos sur la carte</li>
+      <p>Connexion/inscription ? <a href="https://www.instagram.com/"> C'est ici</a></p>
     </form>
     </div>
   </div>
 
   <div id="second_page">
-    <h1>Critères de Recherche</h1>
     <h3>My Google Maps Demo</h3>
-<div id="map"></div>
+    <div class="ui visible very wide left sidebar inverted vertical menu" id="side">
+        <a class="item">
+          <img src="https://scontent.cdninstagram.com/vp/81834cb42906a1ad4287a9b707f84183/5B4109F5/t51.2885-15/s150x150/e35/14334822_1806325886311084_1095502737_n.jpg" />
+        </a>
+    </div>
 
-<!--<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8AAp_IdsbIjFvvJrH86IExMyBNd1JfsQ&callback=initMap">
-</script>-->
-    <script src="ajax.js"></script>
-    <script src="req.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczsPlVhhXlgcxO7GDaHj3pDQMqife1tA&callback=initMap">
+    </script>
+    <script type="text/javascript" src="map.js"></script>
+  <div class="pusher">
+    <div class="ui horizontal segments">
+      <div class="ui segment">
+        <div class="ui tertiary inverted segment">
+          <div id="map"></div>
+
+
+
+            <div class="ui inverted segment">
+              <p>Votre nom sur instagram</p>
+              <div class="ui action input">
+                <input id="username" type="text" placeholder="Search...">
+                <button class="ui icon button" onclick="enter()">
+                  <i class="search icon"></i>
+                </button>
+              </div>
+            </div>
+
+          <p></p>
+          <button class="ui facebook button"><i class="facebook icon"></i> Facebook </button>
+          <button class="ui twitter button"><i class="twitter icon"></i> Twitter </button>
+          <button class="ui instagram button"><i class="instagram icon"></i> Instagram </button>
+        </div>
+      </div>
+
+      <div class="ui segment">
+        <div class="zone">
+
+
+        <div>
+
+      </div>
+    </div></div>
     
 </div>
 
