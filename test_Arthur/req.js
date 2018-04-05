@@ -44,7 +44,7 @@ ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7206
 
 
 function generationLien(id) {
-	var client_id = "9c4fe0163c7545599e409dbb6f1aedf1" ;
+	var client_id = "d55a4d72a41348d1b968ab248ed9a8ec" ;
 
 	var redirect_url = "http://info.univ-lemans.fr/~l3info025/test_Arthur/Instamap.html" ;
 	
