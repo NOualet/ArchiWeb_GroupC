@@ -10,7 +10,7 @@ form
 
 #textsearch{
 
-text-align: right;
+	text-align: right;
 
 }
 
@@ -21,7 +21,75 @@ text-align: right;
 
 td{
     padding: 16px 32px;
-margin: 4px 4px;
+	margin: 4px 4px;
 }
 
 
+####
+
+h1 {
+	text-align : center ;
+}
+
+
+#map {
+  height: 700px;
+  width: 80%;
+position: right;
+ }
+
+ #first_page {
+ 	background-image : url("avion.jpg");
+ 	background-repeat : no-repeat ;
+ 	background-size : cover ;
+ 	height :780px ;
+ }
+
+ #second_page {
+ 	background-color : #343a40 ;
+ 	height : 800px ;
+ }
+
+ #sign-in {
+ 	margin-left : 50px ;
+ 	width : 30% ;
+ }
+
+.mb-3 {
+	text-align : center ;
+	color : #002f7a ;
+}
+
+.gm-style-iw {
+  height: 300px;
+  width: 300px;
+}
+
+
+
+div.zone{
+  width:300px;
+}
+
+img.info{
+  height: 250px;
+  width: 250px;
+}
+
+p.infotext{
+  color: black;
+}
+
+h3 {
+  text-align : center ;
+  color : white ;
+}
+
+.btn-info {
+  margin-top : 30px ;
+}
+
+img.info{
+  height: 250px;
+  width: 250px;
+}
