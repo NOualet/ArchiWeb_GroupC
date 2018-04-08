@@ -73,7 +73,7 @@
 					</td>	
 					<td id="recherche">
 						<!--<input type="submit" value="Recherche" onsubmit="enter()">-->
-						<button class="btn btn-info" onclick="imageByHashtag()">Click</button>
+						<button class="btn btn-info" onclick="enter()">Click</button>
 					</td>
 				  </tr>
 				  
@@ -88,8 +88,20 @@
             </a>
             </div>
             </div>
-            
-            <div class="col-md-7 offset-md-1">
+            <div class="col-md-2">
+              <h4>Recherche</h4>
+              <p>Nombre de photos: </p>
+              <select name="select_photos" id="nb_photos" default="none">
+              <!-- <option disabled selected value></option> -->
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="25">25</option>
+            </select>
+              <input id="hashtag" name="hashtag" placeholder="#hashtag"  type="text">
+            </div>
+
+            <div class="col-md-6">
                 <div id="map"></div>
               
             </div>
