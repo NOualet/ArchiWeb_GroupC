@@ -130,3 +130,66 @@ function enter(){
        }
    });
 }
+
+function generationLien(id) {
+  document.getElementById("bouton").style.display = "none" ;
+
+  var client_id = " d55a4d72a41348d1b968ab248ed9a8ec" ;
+
+  var redirect_url = "http://info.univ-lemans.fr/~l3info025/test_Arthur/Instamap.html" ;
+
+  var lien =  "https://api.instagram.com/oauth/authorize/?client_id=" + client_id + "&redirect_uri="+ redirect_url + "&response_type=token" ;
+
+
+  var createA = document.createElement('a') ;
+
+  var createAText = document.createTextNode("Inscription API") ;
+
+  createA.setAttribute('href', lien) ;
+
+  console.log(lien) ;
+  createA.appendChild(createAText) ;
+
+  var element = document.getElementById(id) ;
+
+  element.appendChild(createA) ;
+}
+
+
+function getAccessToken() {
+
+  var url = window.location.href ; // Récupère le lien de la page
+
+  var url_replace = url.replace("#","?") ; // Remplace le "#" par le "?"
+
+  console.log(url) ;
+
+  var url2 = new URL(url_replace) ;
+
+  accessToken = url2.searchParams.get("access_token") ;
+  console.log(accessToken) ;
+}
+
+
+function imageByHashtag() {
+  ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098",
+    function (reponse) {
+
+        var hashtag = JSON.parse(reponse);
+
+          var userHashtag = document.getElementById("hashtag").value ;
+          var test = document.getElementById("side") ;
+          var tag = "" ;
+
+          for(var i = 0 ; i < hashtag.data.length ; i++) {
+              if(hashtag.data[i].tags == userHashtag) {
+                  var image = document.createElement("img") ;
+                  image.src = hashtag.data[i].images.thumbnail.url ;
+                  test.appendChild(image) ; 
+              }
+          }
+    }
+
+
+  );
+}

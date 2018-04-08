@@ -54,7 +54,7 @@
 						<p>Nombre de photos: </p>
 					</td>
 					<td id="select_nb_photos">
-						<select name="select_photos" id="nb_photos" default="5">
+						<select name="select_photos" id="nb_photos" default="none">
 							<!-- <option disabled selected value></option> -->
 							<option value="5">5</option>
 							<option value="10">10</option>
@@ -69,11 +69,11 @@
 					</td>
 					<td id="select_hashtag" class="input-group">
 						
-						<input name="hashtag" placeholder="@Hastags"  type="text">
+						<input id="hashtag" name="hashtag" placeholder="#hashtag"  type="text">
 					</td>	
 					<td id="recherche">
 						<!--<input type="submit" value="Recherche" onsubmit="enter()">-->
-						<button class="btn btn-info" onclick="enter()">Click</button>
+						<button class="btn btn-info" onclick="imageByHashtag()">Click</button>
 					</td>
 				  </tr>
 				  
@@ -99,6 +99,7 @@
       </div>
     </div>
 
+    <script src="ajax.js"></script>
     <script type="text/javascript" src="test.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
