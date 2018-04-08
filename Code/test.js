@@ -12,8 +12,10 @@ function selection_photos(){
 	choice = select.selectedIndex  
  
 	valeur_cherch = select.options[choice].value;
+  if(valeur_cherch)
 	return valeur_cherch;
 }
+
 
 var listh=[]
 var listv=[]
@@ -48,10 +50,11 @@ function cli(n){
 
 function enter(){
 	
+  var test = document.getElementById("side") ;
+  test.innerHTML = "" ;
 
 	var token = '7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098',
  num_photos =selection_photos(); 
- document.getElementById("side").innerHTML = "" ;
     side=null;
     $.ajax({
        url: 'https://api.instagram.com/v1/users/self/media/recent',
@@ -82,8 +85,6 @@ function enter(){
                  zoom: 1,
                  center: uluru
               });
-		
-
 
               for( x in listh ){
 
@@ -118,7 +119,7 @@ function enter(){
              	});
               markerls[x]=marker;
 
-              sphoto='<img class="img-responsive img-thumbnail" width="110" height="100" onclick="cli('+x+')" src="'+imgbig[x]+'"/>';
+              sphoto='<img class="img-responsive img-thumbnail" onclick="cli('+x+')" src="'+imgbig[x]+'"/>';
               lp=lp+'<div>'+sphoto+'</div>';
               side=side+'<a class="item">'+sphoto+'</a>';
 
@@ -129,6 +130,12 @@ function enter(){
            console.log(data);
        }
    });
+   listh=[]
+   listv=[]
+   img=[]
+   nom=[]
+   imgbig=[]
+   markerls=[];
 }
 
 function generationLien(id) {
@@ -170,10 +177,10 @@ function getAccessToken() {
   console.log(accessToken) ;
 }
 
-
 function imageByHashtag() {
   ajaxGet("https://api.instagram.com/v1/users/self/media/recent/?access_token=7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098",
     function (reponse) {
+
 
         var hashtag = JSON.parse(reponse);
 
@@ -189,8 +196,106 @@ function imageByHashtag() {
                   test.appendChild(image) ; 
               }
           }
+
     }
 
 
   );
+}
+
+function enterByHashtag(){
+  
+  var test = document.getElementById("side") ;
+  test.innerHTML = "" ;
+
+  var userHashtag = document.getElementById("hashtag").value ;
+
+  var token = '7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098',
+ num_photos =selection_photos(); 
+    side=null;
+    $.ajax({
+       url: 'https://api.instagram.com/v1/users/self/media/recent',
+       dataType: 'jsonp',
+       type: 'GET',
+       async:false,
+       data: {access_token: token, count: num_photos},
+       success: function(data){
+           console.log(data);
+             for( x in data.data ){
+                if(data.data[x].location!=null){
+                    if(data.data[x].tags[0] == userHashtag) {
+                      console.log(data.data[x].tags[0]) ;
+                      listh.push(data.data[x].location.latitude);
+                      listv.push(data.data[x].location.longitude);
+                      nom.push(data.data[x].location.name);
+                      img.push(data.data[x].images.thumbnail.url);
+                      imgbig.push(data.data[x].images.standard_resolution.url);
+                    }
+                  }
+                 else{
+                    listh.push( -25.363);
+                    listv.push(131.044);
+                    nom.push("no location");
+                 }
+                    
+             }
+
+              var uluru = {lat: -25.363, lng: 131.044};
+                 map = new google.maps.Map(document.getElementById('map'), {
+                 zoom: 1,
+                 center: uluru
+              });
+
+              for( x in listh ){
+
+              uluru = {lat: listh[x], lng:listv[x]};
+              contentString = '<p class="infotext">'+nom[x]+'</p>'+'<img class="info" src="'+imgbig[x]+'">';
+
+
+              var icon = {
+              url: img[x], // url
+                 scaledSize: new google.maps.Size(50, 50), // scaled size
+                 origin: new google.maps.Point(0,0), // origin
+                 anchor: new google.maps.Point(0, 0) // anchor
+              };
+
+              infowindow=new google.maps.InfoWindow({
+                  content: contentString,
+                  maxWidth: 300,
+                  maxHeight: 300
+              });
+              marker = new google.maps.Marker({
+                  position: uluru,
+                  map: map,
+                  icon: icon,
+                  infowindow : infowindow
+              });
+
+          //console.log(infowindow[x].content);
+              marker.addListener('click', function() {
+                  this.infowindow.open(map, this);
+                  map.setZoom(map.getZoom() + 1);
+                  map.setCenter(this.getPosition());
+              });
+              markerls[x]=marker;
+
+              sphoto='<img class="img-responsive img-thumbnail" onclick="cli('+x+')" src="'+imgbig[x]+'"/>';
+              lp=lp+'<div>'+sphoto+'</div>';
+              side=side+'<a class="item">'+sphoto+'</a>';
+
+              document.getElementById("side").innerHTML=side;
+            }
+       },
+       error: function(data){
+           console.log(data);
+       }
+   });
+
+   listh=[]
+   listv=[]
+   img=[]
+   nom=[]
+   imgbig=[]
+   markerls=[];
+ 
 }
