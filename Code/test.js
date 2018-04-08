@@ -178,6 +178,7 @@ function imageByHashtag() {
 
           var userHashtag = document.getElementById("hashtag").value ;
           var test = document.getElementById("side") ;
+          test.innerHTML = "" ;
           var tag = "" ;
 
           for(var i = 0 ; i < hashtag.data.length ; i++) {
