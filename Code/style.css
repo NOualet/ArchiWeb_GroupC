@@ -4,12 +4,12 @@
     border: 2px solid #ccc;
     border-radius: 2px;
     font-size: 16px;
-    background-color: #d98d26;
+    background-color: #fbd099 ;
     position: left;
     
 }
 
-
+/*#d98d26;*/
 
 #textsearch{
 
@@ -27,8 +27,6 @@ td{
 	margin: 4px 4px;
 }
 
-
-##
 
 #connexion {
  margin-top : 10% ;
@@ -57,8 +55,9 @@ h1 {
 }
 
 #second_page {
- background-color : #1b1c1d ;
+ background-color : #424242 ;
 }
+/*  #1b1c1d */
 
 #map {
         height: 400px;
@@ -94,4 +93,10 @@ h3 {
 
 h4 {
   text-align : center;
+}
+
+footer {
+  height : 30px;
+  text-align : center;
+  background-color : #acb9ca;
 }
