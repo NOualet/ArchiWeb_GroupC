@@ -15,7 +15,6 @@ function selection_photos(){
 	return valeur_cherch;
 }
 
-
 var listh=[]
 var listv=[]
 var img=[]
