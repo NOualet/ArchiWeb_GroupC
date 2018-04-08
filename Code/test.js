@@ -51,6 +51,7 @@ function enter(){
 
 	var token = '7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098',
  num_photos =selection_photos(); 
+ document.getElementById("side").innerHTML = "" ;
     side=null;
     $.ajax({
        url: 'https://api.instagram.com/v1/users/self/media/recent',
@@ -81,7 +82,7 @@ function enter(){
                  zoom: 1,
                  center: uluru
               });
-		document.getElementById("side").innerHTML = " ";
+		
 
 
               for( x in listh ){

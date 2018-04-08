@@ -46,59 +46,35 @@
       
       <div id="second_page">
       	
-			<table>
-				  <tr>
-				  						
-					<td  id="textsearch">
-						
-						<p>Nombre de photos: </p>
-					</td>
-					<td id="select_nb_photos">
-						<select name="select_photos" id="nb_photos" default="none">
-							<!-- <option disabled selected value></option> -->
-							<option value="5">5</option>
-							<option value="10">10</option>
-							<option value="15">15</option>
-							<option value="25">25</option>
-						</select>
-					</td>
-				
-				
-					<td  id="textsearch">
-				  		<label for="hashtag">Recherche par Hastag: </label>
-					</td>
-					<td id="select_hashtag" class="input-group">
-						
-						<input id="hashtag" name="hashtag" placeholder="#hashtag"  type="text">
-					</td>	
-					<td id="recherche">
-						<!--<input type="submit" value="Recherche" onsubmit="enter()">-->
-						<button class="btn btn-info" onclick="enter()">Click</button>
-					</td>
-				  </tr>
-				  
-				</table>
+             
+        
+			
 		
         <div class="row">
-            <div class="col-md-4">
+            
+            <div class="col-md-4" >
               <h3>Images</h3>
               <div class="nav nav-pills nav-stacked" id="side">
                 <a class="item">
                   <img src="" />
-            </a>
+                </a>
+               </div>
             </div>
-            </div>
-            <div class="col-md-2">
+
+             <div class="col-md-2" id="table">
               <h4>Recherche</h4>
               <p>Nombre de photos: </p>
               <select name="select_photos" id="nb_photos" default="none">
-              <!-- <option disabled selected value></option> -->
-              <option value="5">5</option>
-              <option value="10">10</option>
-              <option value="15">15</option>
-              <option value="25">25</option>
-            </select>
+                <!-- <option disabled selected value></option> -->
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="25">25</option>
+              </select>
+              <button class="btn btn-info" onclick="enter()">Click</button>
+              <p>Hashtag: </p>
               <input id="hashtag" name="hashtag" placeholder="#hashtag"  type="text">
+              <button class="btn btn-info" onclick="imageByHashtag()">Click</button>
             </div>
 
             <div class="col-md-6">
