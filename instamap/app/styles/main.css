@@ -1,0 +1,116 @@
+/* Custum colors */
+:root {
+    --sky-blue: #399ad3;
+    --darker-sky-blue: #3488ba;
+    --soft-black: #333;
+    --gray: #999;
+    --dark-blue: #135;
+}
+
+/* General styles */
+body {
+	margin: 0;
+	font-family: arial;
+	color: var(--soft-black);
+	background-image: url("../images/avion.jpg");
+ 	background-repeat : no-repeat ;
+ 	background-size : cover ;
+ 	height :780px ;
+}
+.content, .footer {
+	padding: 25px 50px;
+}
+.navbar {
+	list-style-type: none;
+    background-color: var(--soft-black);
+    color: white;
+    margin: 0;
+    padding: 10px 50px;
+}
+.navbar li {
+    display: inline;
+}
+.navbar li a {
+    display: block;
+    width: 60px;
+}
+/* Buttons */
+.btn {
+  padding: 5px 15px;
+  margin: 10px 0px;
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  color: white;
+  background-color: var(--sky-blue);
+  border: none;
+  border-radius: 5px;
+}
+.btn:active {
+  background-color: var(--darker-sky-blue);
+}
+
+/* links */
+a, a:link, a:visited {
+	color: var(--dark-blue);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.shadowing {
+	display: block;
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: #f7f7f7;
+	z-index:10;
+	opacity:0.85;
+	filter: alpha(opacity=50);
+}
+
+.dialog {
+	display: block;
+	position: fixed;
+	top: 10%;
+	bottom: 10%;
+	left: 10%;
+	right: 10%;
+	z-index:101;
+}
+.box {
+	display: block;
+	position: relative;
+	text-align:center;
+	min-width: 400px;
+	padding: 20px 50px;
+	margin: 10px 25px;
+	border: 1px solid #ddd;
+	background-color: white;
+	overflow: auto;
+}
+
+
+/* Texts */
+.legend {
+	display: block;
+	margin: 15px 0px;
+	color: var(--gray);
+	font-weight: bold;
+}
+
+
+.brand {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* images */
+.logo {
+	border-radius: 10px;
+	max-height: 60px;
+	width: auto;
+}

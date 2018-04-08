@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Instamap</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/bootstrap.css" >
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="instamapApp" >
+	
+    <div class="header">
+		<div class="navbar">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 -2 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+			stroke-linecap="round" stroke-linejoin="round" class="mr-2">
+			<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+			<circle cx="12" cy="13" r="4"></circle></svg>
+		    <span class="brand">Instamap<span class="brand">
+		</div>
+    </div>
+    
+    <div class="content">
+    	<div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+    </div>
+
+    <div class="footer">
+    	
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

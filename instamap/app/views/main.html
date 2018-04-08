@@ -1,0 +1,40 @@
+<!-- Connection -->
+<div ng-show="showConnectionDialog" class="container">
+	<div class="shadowing"></div>
+	<div class="dialog">
+		<div class="box">
+			<div class="brand">Instamap</div>
+			<div class="legend">Instamap a besoin de votre autorisation pour fonctionner. Merci de vous connecter à Instagram.</div>
+			<img class="logo" src="/images/insta.jpg" alt="logo instagram"></img>
+			<div class="btn" ng-click="closeConnectionDialog()">Me connecter à Instagram</div>
+		</div>
+		<div class="box">
+			 <a target="_blank" href="https://www.instagram.com/">Vous n'avez pas de compte Instagram ?</a>
+		</div>
+	</div>
+</div>
+
+<div id="second_page">
+    <div class="row">
+      <div class="col-lg-4">
+        <h3>Images</h3>
+        <div class="nav nav-pills nav-stacked" id="side">
+        <a class="item">
+          <img src="" />
+        </a>
+        </div> 
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=crossorigin="anonymous"></script>
+
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDczsPlVhhXlgcxO7GDaHj3pDQMqife1tA&callback=initMap"></script>
+      <script type="text/javascript" src="req.js"></script>
+  
+      <div class="col-lg-8">
+          <div id="map"></div>
+          <button class="btn btn-info" onclick="enter()">Click</button>
+      </div>
+    </div>
+  </div>
+</div>
