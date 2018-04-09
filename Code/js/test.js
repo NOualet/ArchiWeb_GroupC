@@ -26,6 +26,7 @@ var contentleft;
 var lp='';
 var markerls=[];
 var map;
+var accessToken = "" ;
 
 function initMap() {
     var uluru = {lat: -25.363, lng: 131.044};
@@ -53,9 +54,9 @@ function enter(){
   var test = document.getElementById("side") ;
   test.innerHTML = "" ;
 
-	var token = '7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098',
+	var token = accessToken,
  num_photos =selection_photos(); 
-    side=null;
+    side="";
     $.ajax({
        url: 'https://api.instagram.com/v1/users/self/media/recent',
        dataType: 'jsonp',
@@ -118,8 +119,8 @@ function enter(){
                   map.setCenter(this.getPosition());
              	});
               markerls[x]=marker;
-
-              sphoto='<img class="img-responsive img-thumbnail" onclick="cli('+x+')" src="'+imgbig[x]+'"/>';
+		
+              sphoto='<img class="img-responsive img-thumbnail" onclick="cli('+x+')" src="'+img[x]+'"/>';
               lp=lp+'<div>'+sphoto+'</div>';
               side=side+'<a class="item">'+sphoto+'</a>';
 
@@ -139,11 +140,10 @@ function enter(){
 }
 
 function generationLien(id) {
-  document.getElementById("bouton").style.display = "none" ;
 
-  var client_id = " d55a4d72a41348d1b968ab248ed9a8ec" ;
+  var client_id = "c77ad835ecbe444d886ad9b3d6a01684" ;
 
-  var redirect_url = "http://info.univ-lemans.fr/~l3info025/test_Arthur/Instamap.html" ;
+  var redirect_url = "http://info.univ-lemans.fr/~l3info025/Code/html/test.html" ;
 
   var lien =  "https://api.instagram.com/oauth/authorize/?client_id=" + client_id + "&redirect_uri="+ redirect_url + "&response_type=token" ;
 
@@ -210,7 +210,7 @@ function enterByHashtag(){
 
   var userHashtag = document.getElementById("hashtag").value ;
 
-  var token = '7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098',
+  var token = accessToken,
  num_photos =selection_photos(); 
     side=null;
     $.ajax({
@@ -298,4 +298,13 @@ function enterByHashtag(){
    imgbig=[]
    markerls=[];
  
+}
+
+
+function showDiv(id) {
+    document.getElementById(id).style.display = "block" ;
+}
+
+function notShowDiv(id) {
+    document.getElementById(id).style.display = "none" ;
 }

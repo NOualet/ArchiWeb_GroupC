@@ -5,7 +5,7 @@
     <meta charset="utf-8">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 
     <title>Instamaps</title>
@@ -15,7 +15,7 @@
     <div class="container-fluid">
          <div class="navbar navbar-dark bg-dark box-shadow">
                     <div class="container d-flex justify-content-between">
-                        <a href="#" class="navbar-brand d-flex align-items-center">
+                        <a href="http://info.univ-lemans.fr/~l3info025/Code/html/test.html" class="navbar-brand d-flex align-items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
                                 stroke-linecap="round" stroke-linejoin="round" class="mr-2">
                             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
@@ -28,7 +28,7 @@
           <div class="row">
             <div id="connexion" class="col-sm-3  offset-sm-1">
               <div class="text-center mb-4">
-                  <img id="img_insta" class="mb-4" src="insta.jpg" alt="logo instagram" width="110" height="100">
+                  <a href="http://info.univ-lemans.fr/~l3info025/Code/html/test.html"><img id="img_insta" class="mb-4" src="../images/insta.jpg" <a < alt="logo instagram" width="110" height="100"></a>
                 </div>
                 <div id="etape">
                 <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -39,6 +39,9 @@
                     <li>Afficher photos sur la carte</li>
                   </ul>
                   <p id="co">Connexion/Inscription ? <a href="https://www.instagram.com/"> C'est ici</a></p>
+                  <p id="but"></p>
+                  <p><button class="btn btn-info" onclick="generationLien('but')">Génération du Lien</button></p>
+                  <p><button class="btn btn-info" onclick="getAccessToken();notShowDiv('first_page')">Access token</button></p>
                 </div>
             </div>
           </div>
@@ -91,8 +94,8 @@
       </footer>
     </div>
 
-    <script src="ajax.js"></script>
-    <script type="text/javascript" src="test.js"></script>
+    <script src="../js/ajax.js"></script>
+    <script type="text/javascript" src="../js/test.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4nmEQrjiCvbR1MJlKG6qzgXxhUqwAJ-Y&callback=initMap"></script>
