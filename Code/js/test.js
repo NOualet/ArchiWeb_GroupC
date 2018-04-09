@@ -212,7 +212,7 @@ function enterByHashtag(){
 
   var token = accessToken,
  num_photos =selection_photos(); 
-    side=null;
+    side="";
     $.ajax({
        url: 'https://api.instagram.com/v1/users/self/media/recent',
        dataType: 'jsonp',
@@ -279,7 +279,7 @@ function enterByHashtag(){
               });
               markerls[x]=marker;
 
-              sphoto='<img class="img-responsive img-thumbnail" onclick="cli('+x+')" src="'+imgbig[x]+'"/>';
+              sphoto='<img class="img-responsive img-thumbnail" onclick="cli('+x+')" src="'+img[x]+'"/>';
               lp=lp+'<div>'+sphoto+'</div>';
               side=side+'<a class="item">'+sphoto+'</a>';
 
@@ -308,3 +308,25 @@ function showDiv(id) {
 function notShowDiv(id) {
     document.getElementById(id).style.display = "none" ;
 }
+
+function compteInsta() {
+	 ajaxGet("https://api.instagram.com/v1/users/self/?access_token=7438251793.1677ed0.83537064b66b41b5b3f23183d62ac098",
+    function (reponse) {
+
+	var testUser = document.getElementById('username');
+        var user = JSON.parse(reponse);
+
+    	var userInsta = user.data.username ;
+    	
+    	console.log(userInsta) ;
+    	
+    	document.getElementById('username').value= "@" + userInsta ;
+    	
+
+
+    }
+
+
+  );
+}
+

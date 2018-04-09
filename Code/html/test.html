@@ -41,7 +41,7 @@
                   <p id="co">Connexion/Inscription ? <a href="https://www.instagram.com/"> C'est ici</a></p>
                   <p id="but"></p>
                   <p><button class="btn btn-info" onclick="generationLien('but')">Génération du Lien</button></p>
-                  <p><button class="btn btn-info" onclick="getAccessToken();notShowDiv('first_page')">Access token</button></p>
+                  <p><button class="btn btn-info" onclick="getAccessToken();notShowDiv('first_page') ; showDiv('second_page') ; compteInsta()">Access token</button></p>
                 </div>
             </div>
           </div>
@@ -66,6 +66,9 @@
 
              <div class="col-md-2" id="table">
               <h4>Recherche</h4>
+              <form>
+              <input id="username" name="username"  type="text" value="lol" />
+              </form>
               <p id="pPhoto">Nombre de photos</p>
               <select name="select_photos" id="nb_photos" default="none">
                 <!-- <option disabled selected value></option> -->
